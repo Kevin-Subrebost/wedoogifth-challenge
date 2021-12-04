@@ -9,6 +9,9 @@ In this repo, the calculator server is also shipped in so it is easier to just r
 
 To run the app, you will need to run both the calculator-server and the front-end-app.
 
+- [Calculator server](https://github.com/Kevin-Subrebost/wedoogifth-challenge/tree/main/calculator-server)
+- [Front end App](https://github.com/Kevin-Subrebost/wedoogifth-challenge/tree/main/challenge-front-end)
+
 ## Tools
 
 A small server is provided to emulate the Wedoogift API to run your component with.
