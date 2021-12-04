@@ -1,0 +1,6 @@
+!/e2e
+!/src
+assets/
+browserlist
+package*.json
+tslint.json

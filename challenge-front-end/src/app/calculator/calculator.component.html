@@ -1,0 +1,40 @@
+<div class="calculator-container">
+  <div class="main-input-block-container">
+    <div class="basic-input-container">
+      <label> Montant désiré: </label>
+      <input
+        type="number"
+        [value]="amount"
+        (input)="onChangeAmount($event.target.value)"
+        [disabled]="isProposing"
+        class="calculator-text-input"
+      />
+      <button id="validate" (click)="onValidateAmount()" [disabled]="isProposing">Valider</button>
+    </div>
+    <div class="additional-calculator-actions-container">
+      <button (click)="getNextAmount()" [disabled]="!cardComposition.equal">Suivant</button>
+      <button (click)="getPreviousAmount()" [disabled]="!cardComposition.equal">Précedent</button>
+    </div>
+  </div>
+
+  <div *ngIf="cardComposition.equal">
+    <p>Votre montant est composé des cartes suivantes :</p>
+    <ul>
+      <li *ngFor="let card of cardComposition.equal.cards">{{ card }} €</li>
+    </ul>
+  </div>
+
+  <div *ngIf="isProposing">
+    <p class="no-card-combination">
+      Aucune combinaison ne correspond à votre montant, les montant disponibles les plus proches sont les suivants:
+    </p>
+    <ul>
+      <li>
+        <button (click)="onChooseFloor()">{{ cardComposition.floor.value }}</button>
+      </li>
+      <li>
+        <button (click)="onChooseCeil()">{{ cardComposition.ceil.value }}</button>
+      </li>
+    </ul>
+  </div>
+</div>

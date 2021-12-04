@@ -1,0 +1,12 @@
+<div style="width: 100%; height: 100%; display: flex; justify-content: space-around">
+  <div style="display: flex; flex-direction: column">
+    <h2>Exercises 1 and 2 Component</h2>
+    <app-calculator (selected)="onAmountChanged($event)"></app-calculator>
+  </div>
+  <div style="display: flex; flex-direction: column">
+    <h2>Exercise 3 Component</h2>
+    <form [formGroup]="calculatorForm">
+      <app-form-calculator formControlName="cardCombination"></app-form-calculator>
+    </form>
+  </div>
+</div>

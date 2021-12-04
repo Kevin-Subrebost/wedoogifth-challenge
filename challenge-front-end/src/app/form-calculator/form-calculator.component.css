@@ -1,0 +1,33 @@
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-input-block-container {
+  display: flex;
+}
+
+.basic-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.additional-calculator-actions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+}
+
+.calculator-text-input {
+  height: 70px;
+}
+
+.no-card-combination {
+  max-width: 350px;
+}
